@@ -12,8 +12,9 @@ export default function QRCodeBox({ value }: { value: string }) {
     const canvas = document.createElement("canvas");
     canvas.width = 256;
     canvas.height = 256;
-    const ctx = canvas.getContext("2d");
-    ctx?.drawImage(image, 0, 0, 256, 256);
+    const ctx = canvas.getContext("2d")!;
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(image, 0, 0, 256, 256);
     const blob2 = (await new Promise((res, rej) =>
       canvas.toBlob((blob) => (blob ? res(blob) : rej()), type)
     )) as Blob;
