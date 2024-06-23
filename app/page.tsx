@@ -64,7 +64,7 @@ export default function Home() {
           name="url"
           placeholder="Enter the link here"
           required
-          className="py-2 px-4 rounded"
+          className="bg-gray-100 hover:bg-white focus:bg-white py-2 px-4 rounded"
         />
         <button
           type="submit"
