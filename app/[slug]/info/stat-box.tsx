@@ -22,7 +22,7 @@ export default function StatBox({
     <>
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-6">
         <div>
-          <span>Source URL: </span>
+          <span>Shortened URL: </span>
           <a
             href={sourceUrl.href}
             target="_blank"
@@ -34,7 +34,7 @@ export default function StatBox({
           <CopyButton text={sourceUrl.href} />
         </div>
         <div>
-          <span>Destination URL: </span>
+          <span>Original URL: </span>
           <a
             href={destUrl.href}
             target="_blank"
