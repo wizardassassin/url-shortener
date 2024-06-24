@@ -41,7 +41,9 @@ export default function StatBox({
             rel="noopener noreferrer"
             className="hover:underline hover:text-blue-400 font-medium"
           >
-            {destUrl.href}
+            {destUrl.href.length <= 50
+              ? destUrl.href
+              : destUrl.href.slice(0, 50) + "..."}
           </a>{" "}
           <CopyButton text={destUrl.href} />
         </div>
